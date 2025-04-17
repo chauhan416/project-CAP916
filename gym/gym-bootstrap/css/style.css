@@ -1,0 +1,701 @@
+/* Colors */
+:root {
+    --primary-color: #FFC107;
+    --secondary-color: #292929;
+    --light-color: #D6D6D6;
+    --dark-color: #151515;
+    --primary-txt-color: #F5F5F5;
+    --secondary-txt-color: #151515;
+    --primary-bg-color: #F5F5F5;
+    --secondary-bg-color: #151515;
+}
+
+/* General */
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--primary-bg-color);
+}
+
+/* Utilities */
+.primary-bg-color {
+    background-color: var(--primary-bg-color);
+}
+
+.secondary-bg-color {
+    background-color: var(--secondary-bg-color);
+}
+
+/* Header */
+.navbar-brand {
+    font-weight: 900;
+    color: var(--secondary-txt-color);
+}
+
+.navbar-brand:hover {
+    color: var(--secondary-txt-color);
+}
+
+.navbar-brand span {
+    font-weight: 900;
+}
+
+#navbar button {
+    color: var(--secondary-txt-color);
+    border: none;
+}
+
+#navbar button:focus {
+    box-shadow: none;
+    border: none;
+}
+
+#navbar i {
+    font-size: 1.4em;
+}
+
+#navbar-items .navbar-nav {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+.nav-link {
+    color: var(--secondary-txt-color);
+    font-weight: 700;
+    transition: .5s;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.nav-link[active] {
+    color: var(--primary-color);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--primary-bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+}
+
+/* Main */
+#main-banner {
+    background-image: url(../img/main-banner.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-title,
+#main-subtitle {
+    font-weight: 700;
+    color: var(--primary-txt-color);
+}
+
+#main-title span {
+    font-weight: 700;
+}
+
+#main-subtitle {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* Plans Section */
+#plans-section {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.plans-title {
+    text-align: left;
+    border-left: 4px solid var(--primary-color);
+}
+
+.title,
+.subtitle {
+    color: var(--secondary-txt-color);
+    margin-left: 8px;
+}
+
+.title {
+    font-weight: 700;
+    margin-bottom: 16px;  
+}
+
+.subtitle {
+    font-size: 1.2em;
+}
+
+#plans-container {
+    margin-top: 2em;
+}
+
+#plans-container .card {
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 0;
+    border: 2px solid var(--dark-color);
+    cursor: pointer;
+    transition: .5s;
+}
+
+#plans-container .card-title {
+    font-weight: 700;
+    margin-bottom: 1.5em;
+}
+
+#plans-container .card-text {
+    color: var(--primary-txt-color);
+    font-size: 1.1em;
+}
+
+#plans-container .btn {
+    margin-top: 1.5em;
+    padding: 0.6em 1.2em;
+    border-radius: 0;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+/* Experience Section */
+#experience-section {
+    margin-bottom: 2em;
+}
+
+.experience-title {
+    text-align: left;
+    border-left: 4px solid var(--primary-color);
+}
+
+#experience-container {
+    margin-top: 2em;
+}
+
+#experience-container .card {
+    margin-bottom: 1em;
+    border-radius: 0;
+    border: 2px solid var(--dark-color);
+    cursor: pointer;
+    transition: .5s;
+}
+
+#experience-container img {
+    border-radius: 0;
+}
+
+#experience-container .card-text {
+    color: var(--primary-txt-color);
+    font-size: 1.1em;
+}
+
+/* Gyms Section */
+#gyms-section {
+    margin: 2em 0;
+    padding: 4em 1em;
+}
+
+#gyms-section h2 {
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+#gyms-section p {
+    color: var(--primary-txt-color);
+    margin-bottom: 2em;
+}
+
+#gyms-section label {
+    color: var(--primary-txt-color);
+    display: block;
+    text-align: left; 
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+#gyms-section .btn-drop {
+    background-color: transparent;
+    border-radius: 0;
+    border: 2px solid var(--secondary-color);
+    color: var(--primary-txt-color);
+    font-weight: 300;
+    width: 100%;
+}
+
+#gyms-section .btn-drop:focus {
+    border-color: var(--primary-color);
+}
+
+#gyms-section .dropdown-menu {
+    background-color: var(--light-color);
+    border-radius: 0;
+    width: 100%;
+}
+
+#gyms-section .dropdown-item {
+    color: var(--secondary-txt-color);
+    padding: 0.5em 1em;
+}
+
+#gyms-section .dropdown-item:hover {
+    color: var(--secondary-txt-color);
+    background-color: var(--primary-color);
+}
+
+.answer-drop label {
+    margin-top: 2em;
+}
+
+.answer-drop input {
+    background-color: transparent;
+    border-radius: 0;
+    border: 2px solid var(--secondary-color);
+    color: var(--primary-txt-color);
+    font-weight: 300;
+}
+
+.answer-drop input:disabled {
+    background-color: transparent;
+}
+
+/* Coaches Section */
+#coaches-section {
+    margin-bottom: 2em;
+}
+
+.coaches-title {
+    text-align: left;
+    border-left: 4px solid var(--primary-color);
+}
+
+#coaches-container {
+    margin-top: 2em;
+}
+
+#coaches-container .card {
+    margin-bottom: 1em;
+    border-radius: 0;
+    border: 2px solid var(--dark-color);
+    cursor: pointer;
+    transition: .5s;
+}
+
+#coaches-container img {
+    border-radius: 0;
+}
+
+#coaches-container .card-header,
+#coaches-container .card-footer {
+    color: var(--light-color);
+    border: none;
+}
+
+#coaches-container .card-title {
+    font-weight: 700;
+}
+
+#coaches-container .card-text {
+    color: var(--primary-txt-color);
+}
+
+/* About Section */
+#about-section {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.about-title {
+    text-align: left;
+    border-left: 4px solid var(--primary-color);
+}
+
+#about-container {
+    margin-top: 2em;
+}
+
+#about-banner {
+    margin-bottom: 1em;
+}
+
+#about-banner img {
+    cursor: pointer;
+    transition: .5s;
+    border: 2px solid var(--dark-color);
+}
+
+#about-content {
+    padding: 2em 1em;
+    color: var(--primary-txt-color);
+    cursor: pointer;
+    transition: .5s;
+    border: 2px solid var(--dark-color);
+}
+
+#about-content h3 {
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+#about-content span {
+    font-weight: 700;
+}
+
+#about-content button {
+    border-radius: 0;
+    font-weight: 700;
+    color: var(--dark-color);
+    padding: 0.6em 1.2em;
+}
+
+#about-numbers {
+    margin: 1em 0;
+}
+
+#about-numbers h4 {
+    font-size: 1.5em;
+    color: var(--primary-color);
+}
+
+#about-numbers p {
+    color: var(--light-color);
+}
+
+/* Footer */
+#footer {
+    padding: 2em 1em;
+}
+
+#footer-brand {   
+    color: var(--primary-txt-color);
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+#footer-brand span {   
+    font-weight: 700;
+}
+
+#footer-social-icons i {
+    font-size: 1.4em;
+}
+
+#footer-social-icons a {
+    color: var(--light-color);
+    transition: .5s;
+}
+
+#footer-details {
+    margin-bottom: 2em;
+}
+
+#news-container {
+    margin-top: 1.8em;
+}
+
+#news-container,
+#contact-container,
+#links-container {
+    padding: 0;
+    border: 0;
+    margin-bottom: 2em;
+    text-align: center;  
+}
+
+#footer-details h5 {
+    color: var(--primary-txt-color);   
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1.3em;
+}
+
+#news-container input {
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    border-radius: 0;
+    color: var(--primary-txt-color);
+    font-weight: 300;
+}
+
+#news-container input::placeholder {
+    color: var(--primary-txt-color);
+    font-weight: 300;
+}
+
+#news-container input:focus {
+    box-shadow: none;
+    border-color: var(--primary-color);
+}
+
+#news-container button {
+    border-radius: 0;
+    color: var(--dark-color);
+    font-weight: 700;
+    padding: 0.6em 1.2em;
+    margin-top: 1em;
+}
+
+#contact-container p {
+    color: var(--primary-txt-color);
+}
+
+#contact-container i {
+    color: var(--primary-color);
+    font-size: 1.1em;
+}
+
+#links-container {
+    margin-top: -1em;
+}
+
+#links-container li {
+    margin-bottom: 0.5em;
+}
+
+#links-container a {
+    color: var(--primary-txt-color);
+    transition: .5s;
+    text-decoration: none;
+}
+
+#footer-bottom {
+    color: var(--primary-txt-color);
+    border-top: 2px solid var(--secondary-color);
+    padding-top: 2em;
+    margin-top: -1em;
+    margin-bottom: -1em;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    /* Experience Section */
+    #experience-section {
+        margin-top: -1em;
+    }
+
+    #experience-container .card {
+        min-height: 250px;
+    }
+
+    #experience-container .card-body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Gyms Section */
+    #gyms-section {
+        margin: -1em 0 3em;
+    }
+
+    /* Coaches Section */
+    #coaches-section {
+        margin-top: -1em;
+    }
+
+    #coaches-container .card {
+        min-height: 480px;
+    }
+
+    #coaches-container .card-header,
+    #coaches-container .card-text,
+    #coaches-container .card-footer {
+        font-size: 0.8em;
+    }
+
+    #coaches-container .card-title {
+        font-size: 1em;
+    }
+
+    /* About Section */
+    #about-section {
+        margin-top: -1em; 
+    }
+
+    #about-banner {
+        margin-bottom: 0;
+    }
+
+    #about-banner .img-fluid {
+        max-width: 95%;
+    }
+
+    #about-content {
+        margin-left: -12px;
+        padding: 1em;
+    }
+
+    #about-content h3 {
+        font-size: 1.1em;
+        margin-bottom: 0.4em;
+    }
+      
+    #about-numbers {
+        margin: 0.4em 0;
+    }
+
+    #about-numbers h4 {
+        font-size: 1.1em;
+    }
+    
+    /* Footer */
+    #news-container,
+    #contact-container,
+    #links-container {
+        text-align: left;  
+    }
+
+    #footer-details h5 {
+        font-size: 1.1em;
+    }
+
+    #footer-details .row {
+        margin: 0;
+    }
+
+    #news-container {
+        padding-right: 0.5em;
+    }
+
+    #contact-container {
+        margin-top: 2em;
+        padding: 0 0.5em;
+        border-left: 2px solid var(--secondary-color);
+        border-right: 2px solid var(--secondary-color);
+    }
+
+    #contact-container p {
+        font-size: 0.9em;
+    }
+
+    #contact-container i {
+        font-size: 1em;
+    }
+
+    #links-container {
+        margin-top: 2em;
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Header */
+    .navbar-brand {
+        font-size: 1.8em;
+    }
+
+    #navbar-items .nav-item {
+        margin: 0 0.5em;
+    }
+
+    /* Plans Section */
+    #plans-container .card:hover {
+        border-color: var(--primary-color);
+    }
+
+    /* Experience Section */
+    #experience-container .card:hover {
+        border-color: var(--primary-color);
+    }
+
+    /* Gyms Section */
+    #gyms-section {
+        padding: 4em 7.5em;
+    }
+
+    /* Coaches Section */
+    #coaches-container .card:hover {
+        border-color: var(--primary-color);
+    }
+
+    #coaches-container .card-header,
+    #coaches-container .card-text,
+    #coaches-container .card-footer {
+        font-size: 1em;
+    }
+
+    #coaches-container .card-title {
+        font-size: 20px;
+    }
+
+    /* About Section */
+    #about-banner img:hover {
+        border-color: var(--primary-color);
+    }
+
+    #about-content:hover {
+        border-color: var(--primary-color);
+    }
+
+    #about-content {
+        padding: 2em;
+        display: flex;
+        align-items: center;
+    }
+
+    #about-content h3 {
+        font-size: 1.7em;
+        margin-bottom: 1.2em;
+    }
+      
+    #about-numbers {
+        margin: 2em 0;
+    }
+
+    #about-numbers h4 {
+        font-size: 1.5em;
+    }
+
+    /* Footer */
+    #footer-brand {
+        margin-bottom: 0.8em;
+    }
+
+    #footer-social-icons a:hover {
+        color: var(--primary-color);
+    }
+
+    #footer-details h5 {
+        font-size: 1.3em;
+    }
+
+    #news-container {
+        padding-right: 1.5em;
+    }
+
+    #contact-container {
+        padding: 0 1.5em;
+    }
+
+    #contact-container p {
+        font-size: 1em;
+    }
+
+    #contact-container i {
+        font-size: 1.1em;
+    }
+
+    #links-container {
+        padding-left: 0.8em;
+    }
+
+    #links-container a:hover {
+        color: var(--primary-color);
+    }
+}

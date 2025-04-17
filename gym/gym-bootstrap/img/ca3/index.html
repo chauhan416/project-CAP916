@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Table with Badge</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body class="bg-light p-4">
+
+  <div class="container">
+    <h3>
+      User Table showing updated user count as Badge 
+      <span class="badge bg-primary" id="userCount">0</span>
+    </h3>
+
+    <div class="row g-2 mt-3">
+      <div class="col-md-4">
+        <input type="text" class="form-control" id="nameInput" placeholder="Enter Name" />
+      </div>
+      <div class="col-md-4">
+        <input type="email" class="form-control" id="emailInput" placeholder="Enter Email" />
+      </div>
+      <div class="col-md-4">
+        <input type="=text" class ="form-control"id="numberInput" placeholder="Enter number"\>
+        <button class="btn btn-success w-100" onclick="addUser()">Add</button>
+      </div>
+    </div>
+
+    <div class="mt-4">
+      <table class="table table-bordered table-striped text-center">
+        <thead class="table-dark">
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>number</th>
+          </tr>
+        </thead>
+        <tbody id="userTable">
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    let userCount = 0;
+
+    function addUser() {
+      const name = document.getElementById("nameInput").value.trim();
+      const email = document.getElementById("emailInput").value.trim();
+      const number = document.getElementById("numberInput").value.trim();
+
+
+      if (name === "" || email === "") {
+        alert("Please fill both name and email!");
+        return;
+      }
+
+      if (!email.includes("@") || !email.includes(".")) {
+        alert("Please enter a valid email.");
+        return;
+      }
+      if(number.length<10){
+        alert("plese enter a valid number.");
+        return;
+      }
+
+      userCount++;
+
+      const table = document.getElementById("userTable");
+      const newRow = table.insertRow();
+      newRow.innerHTML = `
+        <td>${userCount}</td>
+        <td>${name}</td>
+        <td>${email}</td>
+        <td>${number}</td>
+      `;
+
+      document.getElementById("userCount").innerText = userCount;
+
+      document.getElementById("nameInput").value = "";
+      document.getElementById("emailInput").value = "";
+      document.getElementById("numberInput").value = "";
+    }
+  </script>
+
+</body>
+</html>
